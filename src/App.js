@@ -1,6 +1,6 @@
 import React from "react";
-import Cards from "./componentes/cards/Cards";
 import { excursiones } from "../src/componentes/cards/data";
+import Cardlist from "./componentes/cards/Cardlist";
 
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     
-      <Cards data={excursiones}/>
+      <Cardlist data={excursiones}/>
 
     </>
 
