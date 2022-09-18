@@ -21,7 +21,7 @@ export const excursiones= [
         imagen:img3,
         nombre:"Pasarelas",
         texto:"Es una excursión ideal para visitar las pasarelas del Glaciar Perito Moreno desde El Calafate sin exigencias físicas y con amplio tiempo para recorrer los balcones con tranquilidad y al ritmo de cada persona,Nuestra excursión al glaciar inicia a las 7:00 a.m. desde su hotel en El Calafate brindándole amplio tiempo para recorrer este increíble lugar, con diversas paradas en puntos panorámicos dentro del Parque Nacional y la visita a las pasarelas, punto panorámico culminante. El recorrido de 78 km desde El Calafate hasta el glaciar es una sucesión de lagos, arroyos, bosques y montañas nevadas. Al llegar al final del recorrido, se arribará al extremo oeste de la Península de Magallanes, desde donde se inicia la caminata por las pasarelas que tienen una extensión total de 5.5 km. Las mismas están a distintos niveles y permiten contemplar el Perito Moreno desde diferentes perspectivas y balcones. Tendrán aproximadamente 5 horas para visitar las pasarelas y maravillarse con el Glaciar Perito Moreno desde su frente. Como servicio opcional, podrá incluir una navegación complementaria de una hora de duración frente a la pared norte del glaciar.",
-        textoCorto:"Excursión clásica para visitar sin exigencias físicas el Glaciar Perito Moreno desde El Calafate y con amplio tiempo para recorrer sus balcones con tranquilidad al ritmo de cada persona y acompañado de un guia",
+        textoCorto:"Excursión clásica para visitar sin exigencias físicas el Glaciar Perito Moreno con amplio tiempo para recorrer sus balcones con tranquilidad al ritmo de cada persona y acompañado de un guia",
     },
     {
         imagen:img4,
