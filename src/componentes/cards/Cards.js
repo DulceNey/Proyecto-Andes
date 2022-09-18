@@ -37,37 +37,34 @@ const Cards = ({ item }) => {
           </button>
         </div>
         {visible ? (
-          <div className="bg-zinc-200 fixed inset-0 z-50 opacity-100 ">
-            <div className=" max-w-800 max-h-700">
-              <div className="bg-white  flex flex-col  p-5 border-4 border-orange-700 rounded-xl ">
-                <div className=" max-h-500 max-w-600 flex flex-col text-lg text-zinc-600 mb-10">
+          <div class="modal-cajon-container " className="bg-zinc-200 fixed inset-0 z-50 opacity-100 ">
+              <div class="modal-container" className="w-screen h-auto  bg-zinc-200  flex flex-col  pt-2 p-5 border-4 border-orange-700 rounded-xl ">
+                <div class="modal" className=" max-h-500 max-w-600 flex flex-col text-lg text-zinc-600 mb-10">
                   <button onClick={() => setVisible(false)}>
                     <svg
-                      className="float-right"
+                      className="float-right h-8 p-0 m-0"
                       xmlns="http://www.w3.org/2000/svg"
                       width="36"
                       height="36"
-                      viewBox="0 0 24 24"
-                    >
+                      viewBox="0 0 24 24" >
                       <path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.424 13.364 12 17.606 7.758z" />
                     </svg>
                   </button>
 
-                  <div className="w-auto h-35 p-3 text-center font-bold border-b-2 border-stone-500">
+                  <div className="w-auto h-full p-0 pb-4 m-0 mb-2 text-center font-bold border-b-2 border-stone-500 md:text-3xl md:font-semibold ">
                     {item.nombre}
                   </div>
 
-                  <div className="w-auto max-h-600 p-4 font-medium text-center text-stone-500">
+                  <div className="w-auto h-auto px-1 font-medium text-center text-stone-500 indent-0  leading-6 md:leading-8 md:font-semibold md:text-2xl">
                     {item.texto}
                   </div>
 
-                  <div className="pt-3">
+                  <div className="">
                     <Boton />
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+           </div>          
         ) : null}
         <Boton />
       </figcaption>
