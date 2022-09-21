@@ -3,13 +3,13 @@ import React from "react";
 const Navbar = () => {
   return (
     <>
-      <body className="w-screen h-screen overflow-x-hidden font-semibold bg-orange-300 text-md">
-        <header class="header" className="fixed z-50 w-full h-16 p-1 bg-slate-400 ">
+      <body className="w-screen h-screen overflow-x-hidden font-semibold bg-naranja-palete text-md">
+        <header class="header" className="fixed z-50 w-full h-16 p-1 bg-gris-fondo2 ">
           <section class="container" className="flex items- justify-between">
             <div class="logo" className="w-20 h-auto p-0 m-0">
               <img src="../multimedia/IMG-20220815-WA0006.jpg" ></img>
             </div>
-            <nav class="menu" className="flex-col w-full h-auto p-1 pt-2 m-0 mt-2 text-lg font-semibold tracking-widest text-center justify-center inline-flex transition-all duration-500 ease-out top-14 bg-neutral-600 text-stone-200 fixed right-0  ">
+            <nav class="menu" className="flex-col w-full h-auto p-1 pt-2 m-0 mt-2 text-lg font-semibold tracking-widest text-center justify-center inline-flex transition-all duration-500 ease-out top-14 bg-gris-fondo2 text-stone-200 fixed right-0  ">
               <a href="#" className="p-3 text-lg no-underline transition-all duration-400 ease-out cursor-default hover:opacity-75 hover:text-orange-400 hover:text-xl"> 
                 <h2 className="m-0">Inicio</h2>
               </a>
@@ -24,7 +24,7 @@ const Navbar = () => {
               </a>
             </nav>
            
-            <button class="menu-btn" className="border-0 fill-orange-700 inline-flex gap-3 p-2 pr-3">
+            <button class="menu-btn" className="border-0 fill-naranja-palete inline-flex gap-3 p-2 pr-3">
               <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"
               >
                 <path d="M4 6H20V8H4zM4 11H20V13H4zM4 16H20V18H4z" />
