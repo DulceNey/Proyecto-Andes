@@ -9,7 +9,7 @@ const Cards = ({ item }) => {
     <figure
       class="card-conteiner"
       key={item.id}
-      className=" max-w-130 h-150 border-solid border-4 border-naranja rounded-md gap-y-1 mx-3 mb-3 bg-gris-fondo2 text-white flex-column md:w-5/6 md:h-full md:gap-1  "
+      className=" max-w-130 h-150 border-solid border-4 border-naranja-palete  rounded-md gap-y-1 mx-3 mb-3 bg-gris-fondo2 text-white flex-column md:w-5/6 md:h-full md:gap-1  "
     >     {/* --- fondo original de tailwind para contenedor de card bg-slate-700 */}
 
       <div class="card-body" className="h-130 p-1 m-2 md:max-h-100">

@@ -7,9 +7,11 @@ module.exports = {
         'gris-fondo': '#54433A',
         'gris-claro-palete':'#DFE0DF',
         'gris-fondo2':'#6D8385',
-        'naranja':'#D87738',
+        'naranja-palete':'#D87738',
         'fondo-boton':'#4C656E',
-        'fondo-palete':'#532401'
+        'fondo-marron-palete':'#532401',
+        'gris-blanco-palete': '#FFF5E9',
+
       }
     },
   },
