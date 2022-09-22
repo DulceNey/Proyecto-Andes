@@ -10,7 +10,7 @@ const Cards = ({ item }) => {
       class="card-conteiner"
       key={item.id}
       className=" max-w-130 h-150 border-solid border-4 border-naranja-palete  rounded-md gap-y-1 mx-3 mb-3 bg-gris-fondo2 text-white flex-column md:w-5/6 md:h-full md:gap-1  "
-    >     {/* --- fondo original de tailwind para contenedor de card bg-slate-700 */}
+    >   
 
       <div class="card-body" className="h-130 p-1 m-2 md:max-h-100">
         <h3 className="text-2xl font-bold mb-2 p-2 text-center capitalize tracking-wider md:text-xl  md:font-semibold  md:tracking-wider md:h-6 md:mb-4 md:mt-0 md:pt-1">
@@ -31,7 +31,7 @@ const Cards = ({ item }) => {
         </div>
         <div class="container-boton">
           <button
-            className="text-white w-26 h-25 bg-slate-400 border border-gray-300 focus:outline-none focus:ring-4  font-normal rounded-full text-sm px-4 py-2 m-2 ml-3 md:font-medium md:px-3 md:py-2 md:m-3 md:mt-4 md: mb-0 lg:mt-5"
+            className="text-white w-26 h-25 bg-slate-400 border border-gray-300 focus:outline-none focus:ring-4  font-normal rounded-full text-sm px-4 py-2 m-2 ml-3 md:font-medium md:px-3 md:py-2 md:m-3 md:mt-4 md: mb-0 lg:mt-5 "
             onClick={() => setVisible(true)}
           >
             Conoce Más
@@ -40,8 +40,7 @@ const Cards = ({ item }) => {
         {visible ? (
           <div class="modal-cajon-container " className="bg-zinc-200 fixed inset-0 z-50 opacity-100 ">
               <div class="modal-container" className="w-screen h-auto bg-gris-claro-palete  flex flex-col  pt-2 p-5 border-4 border-orange-700 rounded-xl ">
-              {/* fondo original de tailwind para el modal bg-zinc-200 */}
-
+              
                 <div class="modal" className="w-auto h-auto flex flex-col text-lg text-zinc-600 mb-10">
                   <button onClick={() => setVisible(false)}>
                     <svg
