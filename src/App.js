@@ -1,10 +1,13 @@
-
+import Carrito from "./componentes/Carrito";
+import 
 
 function App() {
   return (
-    <div className="bg-black w-12 h-12 text-white">
+    <>
+   
+    <Carrito/>
 
-    </div>
+    </>
   );
 }
 
