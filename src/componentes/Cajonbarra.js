@@ -10,28 +10,28 @@ const Cajonbarra = () => {
       >
         <a
           href="#"
-          name="a"
+          value="a"
           className={estilos.A}
         >
           <h2 className="m-0">Inicio</h2>
         </a>
         <a
           href="#excursiones"
-          name="a"
+          value="a"
           className={estilos.A}
         >
           <h2 className="m-0">Excursiones</h2>
         </a>
         <a
           href="#conocenos"
-          name="a"
+          value="a"
           className={estilos.A}
         >
           <h2 className="m-0">Conocenos</h2>
         </a>
         <a
           href="#contacto"
-          name="a"
+          value="a"
           className={estilos.A}
         >
           <h2 className="m-0">Contacto</h2>
