@@ -13,7 +13,7 @@ const Cards = ({ item }) => {
       className={styles.FIGURE}
     >   
 
-      <div  className="h-130 p-1 m-2 md:max-h-100">
+      <div  className="h-auto p-1 m-2">
         <h3 className={styles.H3}>
           {item.nombre}
         </h3>
@@ -24,13 +24,13 @@ const Cards = ({ item }) => {
           className={styles.DIV_IMG}
         ></img>
       </div>
-      <figcaption  className=" h-36 md:h-44 md:mb-0 md:pb-1">
+      <figcaption  className=" h-auto md:h-90 md:mb-0 md:pb-1">
         <div className="md:h-44 md:mb-4 lg:mb-4">
           <p className={styles.PARRAFO}>
             {item.textoCorto}
           </p>
         </div>
-        <div >
+        <div>
           <button
             className={styles.BOTON}
             onClick={() => setVisible(true)}
@@ -39,10 +39,10 @@ const Cards = ({ item }) => {
           </button>
         </div>
         {visible ? (
-          <div className="bg-zinc-200 fixed inset-0 z-50 opacity-100 ">
+          <div className="bg-zinc-200 overflow-y-auto fixed inset-0 z-50 opacity-100">
               <div className={styles.MODAL}>
               
-                <div  className="w-auto h-auto flex flex-col text-lg text-zinc-600 mb-10">
+                <div  className="w-auto flex flex-col text-lg text-zinc-600 mb-10">
                   <button onClick={() => setVisible(false)}>
                     <svg
                       className="float-right h-8 p-0 m-0"
@@ -60,16 +60,19 @@ const Cards = ({ item }) => {
 
                   <div className={styles.MODAL_PARRAFO}>
                     {item.texto}
+
+                    <spam className={styles.SPAM}>${item.precio}</spam>
                   </div>
 
-                  <div className="md:mx-0 px-0">
+                  <div className="mb-0 p-0">
                     <Boton />
                   </div>
+                  
                 </div>
               </div>
            </div>          
         ) : null}
-        <Boton />
+       
       </figcaption>
     </figure>
   );
