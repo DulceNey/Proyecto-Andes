@@ -1,13 +1,15 @@
-import Carrito from "./componentes/Carrito";
-import 
+import ShoppingCart from "./componentes/ShoppingCart";
+ 
 
 function App() {
+
+
   return (
     <>
    
-    <Carrito/>
+   <ShoppingCart/>
 
-    </>
+    </>  
   );
 }
 

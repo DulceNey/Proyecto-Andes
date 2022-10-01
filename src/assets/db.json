@@ -1,0 +1,25 @@
+excursiones:[
+    {
+        id:1,
+        nombre: "Minitrekking",
+        precio:28.000
+
+    },
+    {
+        id:2,
+        nombre:"Excursion nautica",
+        precio:8.500
+    },
+    {
+        id:3,
+        nombre:"Pasarelas",
+        precio:7.000
+    },
+    {
+        id:4,
+        nombre:"Cabalgatas",
+        precio:13.000
+    
+    }
+    
+]
