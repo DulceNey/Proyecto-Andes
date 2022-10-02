@@ -2,7 +2,7 @@ import React from "react";
 import Cajonbarra from "./Cajonbarra";
 import { useState, useEffect } from "react";
 import * as estilos from "./estilos";
-import logo from '../multimedia/Andeslogo.png'
+import logo from '../multimedia/logo.png'
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
