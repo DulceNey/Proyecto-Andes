@@ -29,11 +29,7 @@ const ShoppingCart = () => {
       
   return (
     <>
-      <div>
-        <h2>Carrito de compras</h2>
-        <h3>Productos</h3>
-     </div>
-
+      
      <div className='flex flex-auto justify-around gap-12  bg-orange-500 border-2'>
         {products.map(product => <Productos key={product.id} data={product} addToCart={addToCart}/>)}
      </div>

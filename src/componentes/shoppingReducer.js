@@ -1,5 +1,4 @@
 import { TYPES } from "./acciones";
-// import { useEffect } from "react";
 import axios from "axios";
 
 
@@ -35,11 +34,7 @@ export const shoppingInitialState={
 
   
 
-//   const getData= async()=>{
-    
-//     const res= await axios.get("http://localhost:8080/excursiones");
-//     const json= await res.data
-//     shoppingInitialState(json)}
+
 
 
   
