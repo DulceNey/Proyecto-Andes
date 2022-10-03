@@ -1,33 +1,53 @@
-import { TYPES } from "./acciones"
+import { TYPES } from "./acciones";
+// import { useEffect } from "react";
+import axios from "axios";
+
 
 export const shoppingInitialState={
     products:[
-    {
-        id:1, 
-        nombre:"Minitrekking",
-        precio:28000
+            {
+                id:1,
+                nombre: "Minitrekking",
+                precio:"28.000"
+        
+            },
+            {
+                id:2,
+                nombre:"Excursion nautica",
+                precio:"8.500"
+            },
+            {
+                id:3,
+                nombre:"Pasarelas",
+                precio:"7.000"
+            },
+            {
+                id:4,
+                nombre:"Cabalgatas",
+                precio:"13.000"
+            
+            }
+        ],
 
-    },
-    {
-        id:2,
-        nombre:"Excursion nautica",
-        precio:8500
-    },
-    {
-        id:3,
-        nombre:"Pasarelas",
-        precio:7000
-    },
-    {
+    cart:[{
         id:4,
         nombre:"Cabalgatas",
-        precio:13000
+        precio:"13.000"
     
-    }
-],
-cart:[]
-    
+    }],
+
 }
+
+  
+
+//   const getData= async()=>{
+    
+//     const res= await axios.get("http://localhost:8080/excursiones");
+//     const json= await res.data
+//     shoppingInitialState(json)}
+
+
+  
 export function shoppingReducer(state,acciones) {
     switch (acciones.type) {
         case TYPES.ADD_TO_CART:{

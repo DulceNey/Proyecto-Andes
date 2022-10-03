@@ -1,4 +1,6 @@
+import ModalContainer from "./componentes/ModalContainer";
 import ShoppingCart from "./componentes/ShoppingCart";
+
  
 
 function App() {
@@ -6,7 +8,7 @@ function App() {
 
   return (
     <>
-   
+   {/* <ModalContainer/> */}
    <ShoppingCart/>
 
     </>  

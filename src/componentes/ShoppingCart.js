@@ -1,33 +1,32 @@
 import React from 'react';
 import { TYPES } from './acciones';
-import { useReducer } from 'react';
+import { useReducer} from 'react';
 import { shoppingInitialState,shoppingReducer } from './shoppingReducer';
 import Productos from './Productos';
 import ItemsCarrito from './ItemsCarrito';
 
+
 const ShoppingCart = () => {
 
-    const [state, dispatch] = useReducer(shoppingReducer,shoppingInitialState, )
+    const [state, dispatch] = useReducer(shoppingReducer,shoppingInitialState);
+    const {products,cart}=state;
 
-    const {products,cart}=state
-
-    const addToCart = (id)=>{
-      dispatch({type:TYPES.ADD_TO_CART, payload:id})
-
-};
-    const deleteFromCart = (id,all=false)=>{
-      if (all) {
-        dispatch({type:TYPES.REMOVE_ALL_PRODUCTS, payload:id})
-      } else {
+    
+      const addToCart = (id)=>{
+        dispatch({type:TYPES.ADD_TO_CART, payload:id})
         
-        dispatch({type:TYPES.REMOVE_ONE_PRODUCT, payload:id})
-      }
-    };
-
-    const clearCart = ()=>{};
-
-
-
+      };
+      const deleteFromCart = (id,all=false)=>{
+        if (all) {
+          dispatch({type:TYPES.REMOVE_ALL_PRODUCTS, payload:id})
+        } else {
+          
+          dispatch({type:TYPES.REMOVE_ONE_PRODUCT, payload:id})
+        }
+      };
+           
+      
+      
   return (
     <>
       <div>
@@ -38,15 +37,14 @@ const ShoppingCart = () => {
      <div className='flex flex-auto justify-around gap-12  bg-orange-500 border-2'>
         {products.map(product => <Productos key={product.id} data={product} addToCart={addToCart}/>)}
      </div>
+     
      <h3>carrito</h3>
 
-     <div className='w-full h-auto flex flex-auto justify-around gap-12 bg-orange-300 border-2'>
-        {cart.map((item,index)=><ItemsCarrito key={index} data={item} deleteFromCart={deleteFromCart}/>)}
+     <div className='w-4/6 h-screen flex-1 flex-grow flex-col justify-center items-center  bg-slate-200 border-2'>
+        {cart.map((item,index)=><ItemsCarrito key={index} data={item} deleteFromCart={deleteFromCart} addToCart={addToCart}/>)}
      </div>
 
-     {/* <button onClick={()=>clearCart()} type="button" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">limpiar Carrito</button> */}
-
-   
+  
 
     </>
   )
