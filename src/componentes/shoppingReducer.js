@@ -29,12 +29,7 @@ export const shoppingInitialState={
             }
         ],
 
-    cart:[{
-        id:4,
-        nombre:"Cabalgatas",
-        precio:"13.000"
-    
-    }],
+    cart:[ ],
 
 }
 
