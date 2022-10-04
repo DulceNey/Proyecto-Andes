@@ -1,4 +1,4 @@
-import Patagonia6 from "../Imagenes/Patagonia-6.jpg"
+import Patagonia6 from "../imagenes/Patagonia-6.jpg"
 
 
 const Imagen2 = () => {
