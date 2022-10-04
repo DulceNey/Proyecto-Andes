@@ -2,7 +2,12 @@ import React from 'react';
 import Cards from './Cards';
 import *as  styles from './styles';
 
-const Cardlist = ({data}) => {
+
+
+const Cardlist = ({data,shoppingReducer}) => {
+
+  const {addToCart}=shoppingReducer
+
   return (
     <>
       <div className={styles.CARDLIST_CONT}>
@@ -10,6 +15,7 @@ const Cardlist = ({data}) => {
           <Cards
             key={item.id}
             item={item}
+            addToCart={addToCart}
           >
           
           </Cards>

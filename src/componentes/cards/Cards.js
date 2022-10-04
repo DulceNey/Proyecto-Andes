@@ -1,9 +1,10 @@
 import React from "react";
 import Boton from "../boton/Boton";
 import { useState } from "react";
+import { shoppingReducer } from "../shoppingReducer";
 import *as styles from "./styles";
 
-const Cards = ({ item }) => {
+const Cards = ({ item ,addToCart}) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -65,7 +66,7 @@ const Cards = ({ item }) => {
                   </div>
 
                   <div className="mb-0 p-0">
-                    <Boton />
+                    <Boton  addToCart={addToCart}/>
                   </div>
                   
                 </div>
