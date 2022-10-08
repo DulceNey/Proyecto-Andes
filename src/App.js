@@ -1,8 +1,9 @@
-
-
+import React from "react";
+import Banner from "./components/banner";
 function App() {
   return (
-    <div className="bg-black w-12 h-12 text-white">
+    <div>
+      <Banner/>
 
     </div>
   );
