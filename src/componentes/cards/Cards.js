@@ -1,12 +1,12 @@
 import React from "react";
-import Boton from "../boton/Boton";
 import { useState } from "react";
-import { shoppingReducer } from "../shoppingReducer";
 import *as styles from "./styles";
+import ModalContainer from "../ModalContainer";
 
 const Cards = ({ item ,addToCart}) => {
   const [visible, setVisible] = useState(false);
-
+ const [visibleModal, setVisibleModal] = useState(false)
+   
   return (
     <figure
       
@@ -39,13 +39,20 @@ const Cards = ({ item ,addToCart}) => {
             Conoce Más
           </button>
         </div>
-        {visible ? (
+
+        {visible && 
+        
           <div className="bg-zinc-200 overflow-y-auto fixed inset-0 z-50 opacity-100">
+
+                    
               <div className={styles.MODAL}>
+                
+                    {visibleModal && <ModalContainer setVisibleModal={{setVisibleModal}}/>}
+                    {!visible && null }
               
                 <div  className="w-auto flex flex-col text-lg text-zinc-600 mb-10">
-                  <button onClick={() => setVisible(false)}>
-                    <svg
+                  <button >
+                    <svg onClick={() => setVisible(false)}
                       className="float-right h-8 p-0 m-0"
                       xmlns="http://www.w3.org/2000/svg"
                       width="36"
@@ -55,6 +62,8 @@ const Cards = ({ item ,addToCart}) => {
                     </svg>
                   </button>
 
+                      
+
                   <div className={styles.MODAL_TITULO}>
                     {item.nombre}
                   </div>
@@ -63,16 +72,24 @@ const Cards = ({ item ,addToCart}) => {
                     {item.texto}
 
                     <spam className={styles.SPAM}>${item.precio}</spam>
+
+
                   </div>
 
                   <div className="mb-0 p-0">
-                    <Boton  addToCart={addToCart}/>
+                    <button onClick={()=>{addToCart(item.id); setVisibleModal(true)  } } type="button" className="text-white bg-fondo-boton hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold tracking-wider rounded-lg text-md px-5 py-2.5 mx-3 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 float-right lg:py-2 lg:mx-3 lg:mt-0 lg:mb-1 lg:text-lg lg:font-medium ">Reservar
+                    </button>
+     
+                    
                   </div>
                   
                 </div>
               </div>
            </div>          
-        ) : null}
+         }
+         {
+         !visible && null 
+        }
        
       </figcaption>
     </figure>

@@ -12,7 +12,7 @@ export const SPAM="float-right text-naranja-palete mt-4 mb-2 text-3xl font-wide"
 
 export const BOTON="text-white w-26 h-25 bg-slate-400 border border-gray-300 focus:outline-none focus:ring-4  font-normal rounded-full text-sm px-4 py-2 m-2 mr-3 mb-7 md:font-medium md:px-3 md:py-2 md:m-5 md:mt-4 md:mb-3 lg:mt-5 float-right";
 
-export const MODAL="w-auto overflow-y-auto bg-gris-claro-palete  flex flex-col pb-1 pt-2 p-5 border-4 border-orange-700 rounded-xl md:w-screen";
+export const MODAL="overflow-x-hidden w-5/6 bg-gris-claro-palete  flex flex-col pb-1 pt-2 p-5 border-4 border-orange-700 rounded-xl md:w-screen";
 
 export const MODAL_TITULO="w-auto h-full p-0 pb-4 m-0 mb-2 capitalize text-center font-bold border-b-2 border-stone-500 md:text-3xl  md:tracking-wider";
 
