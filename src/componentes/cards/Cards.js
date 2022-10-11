@@ -1,10 +1,12 @@
 import React from "react";
-import Boton from "../boton/Boton";
+//import Boton from "../boton/Boton";
 import { useState } from "react";
 import *as styles from "./styles";
+import ModalContainer from "../ModalContainer";
 
-const Cards = ({ item }) => {
+const Cards = ({ item,addToCart }) => {
   const [visible, setVisible] = useState(false);
+ const [visibleModal, setVisibleModal] = useState(false)
 
   return (
     <figure
@@ -13,7 +15,7 @@ const Cards = ({ item }) => {
       className={styles.FIGURE}
     >   
 
-      <div  className="h-130 p-1 m-2 md:max-h-100">
+      <div  className="h-auto p-1 m-2">
         <h3 className={styles.H3}>
           {item.nombre}
         </h3>
@@ -24,13 +26,13 @@ const Cards = ({ item }) => {
           className={styles.DIV_IMG}
         ></img>
       </div>
-      <figcaption  className=" h-36 md:h-44 md:mb-0 md:pb-1">
+      <figcaption  className=" h-auto md:h-90 md:mb-0 md:pb-1">
         <div className="md:h-44 md:mb-4 lg:mb-4">
           <p className={styles.PARRAFO}>
             {item.textoCorto}
           </p>
         </div>
-        <div >
+        <div>
           <button
             className={styles.BOTON}
             onClick={() => setVisible(true)}
@@ -38,13 +40,16 @@ const Cards = ({ item }) => {
             Conoce Más
           </button>
         </div>
-        {visible ? (
-          <div className="bg-zinc-200 fixed inset-0 z-50 opacity-100 ">
+        {visible && 
+          <div className="bg-zinc-200 overflow-y-auto fixed inset-0 z-50 opacity-100">
               <div className={styles.MODAL}>
               
-                <div  className="w-auto h-auto flex flex-col text-lg text-zinc-600 mb-10">
-                  <button onClick={() => setVisible(false)}>
-                    <svg
+              {visibleModal && <ModalContainer setVisibleModal={{setVisibleModal}}/>}
+              {!visible && null }
+              
+                <div  className="w-auto flex flex-col text-lg text-zinc-600 mb-10">
+                  <button >
+                    <svg onClick={() => setVisible(false)}
                       className="float-right h-8 p-0 m-0"
                       xmlns="http://www.w3.org/2000/svg"
                       width="36"
@@ -60,16 +65,21 @@ const Cards = ({ item }) => {
 
                   <div className={styles.MODAL_PARRAFO}>
                     {item.texto}
+
+                    <spam className={styles.SPAM}>${item.precio}</spam>
                   </div>
 
-                  <div className="md:mx-0 px-0">
-                    <Boton />
+                  <div className="mb-0 p-0">
+                    <button onClick={()=>{addToCart(item.id); setVisibleModal(true)  } } type="button" className="text-white bg-fondo-boton hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold tracking-wider rounded-lg text-md px-5 py-2.5 mx-3 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 float-right lg:py-2 lg:mx-3 lg:mt-0 lg:mb-1 lg:text-lg lg:font-medium ">Reservar
+                    </button>                     
                   </div>
                 </div>
               </div>
            </div>          
-        ) : null}
-        <Boton />
+         }{
+          !visible && null 
+         } 
+       
       </figcaption>
     </figure>
   );
