@@ -1,16 +1,21 @@
-import ModalContainer from "./componentes/ModalContainer";
-
- 
+import React from "react";
+//import Cardlist from "./componentes/cards/Cardlist";
+import ShoppingCart from "../src/componentes/ShoppingCart";
+import ToursProvider from "./componentes/ToursProvider";
 
 function App() {
-
-
+  
   return (
     <>
-   {/* <ModalContainer/> */}
-   <ModalContainer/>
+    <ToursProvider>
 
-    </>  
+      {/* <Cardlist  /> */}
+      <ShoppingCart/> 
+
+    </ToursProvider>
+        
+    </>
+  
   );
 }
 

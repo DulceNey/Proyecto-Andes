@@ -5,7 +5,7 @@ import React from 'react'
 const ItemsCarrito = ({data,deleteFromCart,addToCart}) => {
     const {id,nombre,precio,cantidad}=data
   return (
-    <div className='w-full flex flex-row justify-between items-center pl-3'>
+    <div className='w-full flex flex-row justify-between items-center pl-3 text-slate-900'>
       <div className=' tracking-wide p-3 '>
         <h3 className='text-md font-semibold '>{nombre}</h3>
         <h3 className='text-md font-normal pb-3 mb-2 pt-1 opacity-0 md:opacity-100'>${precio}</h3>
