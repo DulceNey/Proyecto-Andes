@@ -1,8 +1,12 @@
+import React, { Components } from "react"
+import Foteer from './Components/Foteer'
 
 
 function App() {
   return (
-    <div className="bg-black w-12 h-12 text-white">
+
+    <div>
+       <Foteer/>
 
     </div>
   );
