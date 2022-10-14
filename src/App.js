@@ -1,24 +1,22 @@
 import React from "react";
 import Cardlist from "./componentes/cards/Cardlist";
-import ShoppingCart from "../src/componentes/ShoppingCart";
+import ShoppingCart from "./componentes/ShoppingCart";
 import ToursProvider from "./componentes/ToursProvider";
 
 
 
 
-
-
 function App() {
-  
-  return (
-    <>
-    <ToursProvider>
 
-      <Cardlist  />
-      {/* <ShoppingCart/>  */}
+   return (
+    <>
+   <ToursProvider>
+      <Cardlist />
+
+    <ShoppingCart/> 
 
     </ToursProvider>
-    
+ 
      
     </>
 

@@ -1,17 +1,37 @@
 import React from 'react';
 import { TYPES } from './acciones';
+import { useEffect } from 'react';
 import Productos from './Productos';
 import ItemsCarrito from './ItemsCarrito';
 import { useToursContext } from './ToursContext';
+import axios from 'axios';
 
 
 
 const ShoppingCart =() => {
 
   const {state,dispatch} =useToursContext();
-  const {products,cart}=state;
- 
+
+
+  const updateState = async () =>{
+
+const productsURL = "http://localhost:8080/products";
+const cartURL = "http://localhost:8080/cart";
+const resProducts = await axios.get(productsURL);
+const resCart = await axios.get(cartURL);
+const ProductList = await resProducts.data
+const newCartItem = await resCart.data
+
+dispatch ({type:TYPES.READ_STATE , payload: [ProductList , newCartItem]})
+
+}
+
+useEffect (() =>{
+  updateState()
+
+},[]);
     
+const {products,cart}=state;
       const addToCart = (id)=>{
         dispatch({type:TYPES.ADD_TO_CART, payload:id})
         
@@ -28,9 +48,9 @@ const ShoppingCart =() => {
            
   return (
     <>
-    {/* <div className='flex flex-auto justify-around gap-12  bg-orange-500 border-2'>
+    <div className='flex flex-auto justify-around gap-12  bg-orange-500 border-2'>
         {products.map(product => <Productos key={product.id} data={product} addToCart={addToCart}/>)}
-     </div>  */}
+     </div> 
      <h3>carrito</h3>
 
      <div className='w-4/6 h-screen flex-1 flex-grow flex-col justify-center items-center  bg-slate-200 border-2'>

@@ -5,11 +5,13 @@ import *as  styles from './styles';
 import { useToursContext } from '../ToursContext';
 
 
+
 const Cardlist = (props) => {
   const {state,dispatch} =useToursContext();
   const {products,cart}=state;
 
     const addToCart = (id)=>{
+      //console.log(id)
         dispatch({type:TYPES.ADD_TO_CART, payload:id})
         
       };
