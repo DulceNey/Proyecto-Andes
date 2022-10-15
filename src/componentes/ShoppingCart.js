@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TYPES } from './acciones';
 import { useEffect } from 'react';
 import Productos from './Productos';
@@ -8,9 +8,10 @@ import axios from 'axios';
 
 
 
-const ShoppingCart =() => {
+const ShoppingCart =({setvisibleCart}) => {
 
   const {state,dispatch} =useToursContext();
+ 
 
 
   const updateState = async () =>{
@@ -48,13 +49,17 @@ const {products,cart}=state;
            
   return (
     <>
+   <svg  onClick={()=>{setvisibleCart(false)}} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.424 13.364 12 17.606 7.758z" />
+        </svg>
+        
     <div className='flex flex-auto justify-around gap-12  bg-orange-500 border-2'>
         {products.map(product => <Productos key={product.id} data={product} addToCart={addToCart}/>)}
      </div> 
      <h3>carrito</h3>
 
      <div className='w-4/6 h-screen flex-1 flex-grow flex-col justify-center items-center  bg-slate-200 border-2'>
-        {cart.map((item,index)=><ItemsCarrito key={index} data={item} addToCart={addToCart} deleteFromCart={deleteFromCart} />)}
+        {cart.map((item,index)=><ItemsCarrito key={index} data={item} addToCart={addToCart} deleteFromCart={deleteFromCart}/>)}
      </div>
 
   

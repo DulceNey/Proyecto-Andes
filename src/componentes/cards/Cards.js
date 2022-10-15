@@ -2,10 +2,13 @@ import React from "react";
 import { useState } from "react";
 import *as styles from "./styles";
 import ModalContainer from "../ModalContainer";
+import ShoppingCart from "../ShoppingCart";
 
 const Cards = ({ item ,addToCart}) => {
   const [visible, setVisible] = useState(false);
- const [visibleModal, setVisibleModal] = useState(false)
+ const [visibleModal, setVisibleModal] = useState(false);
+ const [visibleCart, setvisibleCart] = useState(false);
+
    
   return (
     <figure
@@ -47,7 +50,7 @@ const Cards = ({ item ,addToCart}) => {
                     
               <div className={styles.MODAL}>
                 
-                    {visibleModal && <ModalContainer setVisibleModal={{setVisibleModal}}/>}
+                    {visibleModal && <ModalContainer setVisibleModal={setVisibleModal} visibleCart={visibleCart} setvisibleCart={setvisibleCart}/>}
                     {!visible && null }
               
                 <div  className="w-auto flex flex-col text-lg text-zinc-600 mb-10">
@@ -61,11 +64,9 @@ const Cards = ({ item ,addToCart}) => {
                       <path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.424 13.364 12 17.606 7.758z" />
                     </svg>
                   </button>
-
-                      
-
+   
                   <div className={styles.MODAL_TITULO}>
-                    {item.nombre}
+                      {item.nombre}
                   </div>
 
                   <div className={styles.MODAL_PARRAFO}>
@@ -73,11 +74,15 @@ const Cards = ({ item ,addToCart}) => {
 
                     <spam className={styles.SPAM}>${item.precio}</spam>
 
-
                   </div>
 
                   <div className="mb-0 p-0">
-                    <button onClick={()=>{addToCart(item.id); setVisibleModal(true)  } } type="button" className="text-white bg-fondo-boton hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold tracking-wider rounded-lg text-md px-5 py-2.5 mx-3 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 float-right lg:py-2 lg:mx-3 lg:mt-0 lg:mb-1 lg:text-lg lg:font-medium ">Reservar
+                    <button onClick={()=>{
+                      addToCart(item.id);
+                      visibleCart(true)}}
+                    
+                    // setVisibleModal(true) 
+                 type="button" className="text-white bg-fondo-boton hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold tracking-wider rounded-lg text-md px-5 py-2.5 mx-3 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 float-right lg:py-2 lg:mx-3 lg:mt-0 lg:mb-1 lg:text-lg lg:font-medium ">Reservar
                     </button>
      
                     
