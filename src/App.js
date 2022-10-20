@@ -1,12 +1,16 @@
-import React from "react";
-import Banner from "./components/banner";
-function App() {
+import React from "react"
+import Front from "./Components/Front"
+
+
+
+
+
+const App = () => {
   return (
     <div>
-      <Banner/>
-
+   <Front/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
