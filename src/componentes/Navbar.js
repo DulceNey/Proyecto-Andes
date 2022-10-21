@@ -71,7 +71,7 @@ const Navbar = () => {
             Inicio
           </section>
           <section id="excursiones" className="w-full h-1/4">
-            Excursiones
+          Excursiones
           </section>
           <section id="conocenos" className="w-full h-1/4">
             Conocenos
