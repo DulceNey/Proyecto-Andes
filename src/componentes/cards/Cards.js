@@ -49,9 +49,9 @@ const Cards = ({ item ,addToCart}) => {
 
                     
               <div className={styles.MODAL}>
-                
-                    {visibleModal && <ModalContainer setVisibleModal={setVisibleModal} visibleCart={visibleCart} setvisibleCart={setvisibleCart}/>}
-                    {!visible && null }
+              <ModalContainer setVisible={setVisible}/>
+                    {/* {visibleModal && <ModalContainer setVisibleModal={setVisibleModal} visibleCart={visibleCart} setvisibleCart={setvisibleCart}/>} */}
+                    {/* {!visible && null } */}
               
                 <div  className="w-auto flex flex-col text-lg text-zinc-600 mb-10">
                   <button >
