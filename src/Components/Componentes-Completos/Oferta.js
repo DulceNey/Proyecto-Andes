@@ -3,7 +3,7 @@ import Imagen2 from "../Imagen2";
 
 const Oferta = () => {
   return (
-    <div className=" w-full bg-orange-500 border-4 h-[auto] border-amber-900 ">
+    <div className=" w-full bg-orange-500 dark:bg-slate-900 border-4 h-[auto] border-amber-900 dark:border-gray-400">
       <Imagen2 />
       <h1 className="text-neutral-300 text-4xl mx-7 text-center">
         {" "}
@@ -11,7 +11,7 @@ const Oferta = () => {
       </h1>
       <h2 className="text-neutral-300 mt-3 mx-7 text-center">
         {" "}
-        Aproveche esta oportunidad única <br />
+        Aproveche esta oferta unica <br />
         para viajar con una persona.
         <br /> Disfruten de las maravillas <br /> de la Patagonia juntos.
       </h2>

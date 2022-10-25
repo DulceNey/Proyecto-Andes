@@ -3,11 +3,11 @@ import Lista from "../Lista";
 
 export const Presentacion = () => {
   return (
-    <div className="bg-orange-500 border-amber-900 border-4">
+    <div className="bg-orange-500 dark:bg-slate-900 border-amber-900 dark:border-gray-400 border-4">
       <Imagen1 />
       <h1 className="text-center text-4xl text-neutral-300">
         {" "}
-        ¿Qué hace único a Los Andes: Aventura y Turismo?
+        ¿Que hace unico a Los Andes: Aventura y Turismo?
       </h1>
       <p className="text-center my-2.5 text-2xl text-neutral-300">
         {" "}
