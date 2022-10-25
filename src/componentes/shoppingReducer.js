@@ -66,7 +66,7 @@ export function shoppingReducer(state,acciones) {
             let newItem=state.products.find(product=>product.id===acciones.payload)
 
             const itemCargado=state.cart.find(item=> item.id===newItem.id);
-
+           
             return itemCargado 
             ?{
                 ...state,

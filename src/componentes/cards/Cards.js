@@ -2,14 +2,24 @@ import React from "react";
 import { useState } from "react";
 import *as styles from "./styles";
 import ModalContainer from "../ModalContainer";
-import ShoppingCart from "../ShoppingCart";
+import { IMAGEN } from "./multimedia";
+//import{PostCarrito} from "../ShoppingCart"
+
+
+
 
 const Cards = ({ item ,addToCart}) => {
   const [visible, setVisible] = useState(false);
  const [visibleModal, setVisibleModal] = useState(false);
  const [visibleCart, setvisibleCart] = useState(false);
+ 
 
-   
+ //const handleSend=()=> PostCarrito
+
+
+
+
+ 
   return (
     <figure
       
@@ -19,12 +29,13 @@ const Cards = ({ item ,addToCart}) => {
 
       <div  className="h-auto p-1 m-2">
         <h3 className={styles.H3}>
+
           {item.nombre}
         </h3>
 
         <img
-          src={item.imagen}
-          alt={item.nombre}
+          src={IMAGEN.imagen}
+          alt={IMAGEN.nombre}
           className={styles.DIV_IMG}
         ></img>
       </div>
@@ -49,10 +60,15 @@ const Cards = ({ item ,addToCart}) => {
 
                     
               <div className={styles.MODAL}>
-              <ModalContainer setVisible={setVisible}/>
-                    {/* {visibleModal && <ModalContainer setVisibleModal={setVisibleModal} visibleCart={visibleCart} setvisibleCart={setvisibleCart}/>} */}
-                    {/* {!visible && null } */}
-              
+
+
+              <ModalContainer 
+              setVisible={setVisible}
+              data={item}
+              //saveData={saveData}
+              // data={db}
+              />
+                 
                 <div  className="w-auto flex flex-col text-lg text-zinc-600 mb-10">
                   <button >
                     <svg onClick={() => setVisible(false)}
@@ -75,13 +91,16 @@ const Cards = ({ item ,addToCart}) => {
                     <spam className={styles.SPAM}>${item.precio}</spam>
 
                   </div>
-
-                  <div className="mb-0 p-0">
-                    <button onClick={()=>{
-                      addToCart(item.id);
-                      visibleCart(true)}}
+                  
+                  <div   className="mb-0 p-0">
                     
-                    // setVisibleModal(true) 
+                    <button name="name" onClick={()=>{
+                      addToCart(item.id);
+                      visibleCart(true);
+                      //handleSend();
+                    }
+                    }
+                    
                  type="button" className="text-white bg-fondo-boton hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-semibold tracking-wider rounded-lg text-md px-5 py-2.5 mx-3 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 float-right lg:py-2 lg:mx-3 lg:mt-0 lg:mb-1 lg:text-lg lg:font-medium ">Reservar
                     </button>
      
