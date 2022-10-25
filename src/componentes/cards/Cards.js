@@ -1,13 +1,9 @@
 import React from "react";
-
 import { useState } from "react";
 import *as styles from "./styles";
 import ModalContainer from "../ModalContainer";
 import { IMAGEN } from "./multimedia";
 import { TYPES } from "../acciones";
-
-//import{PostCarrito} from "../ShoppingCart"
-
 
 
 
@@ -16,8 +12,6 @@ const Cards = ({ item ,addToCart}) => {
  const [visibleModal, setVisibleModal] = useState(false);
  const [visibleCart, setvisibleCart] = useState(false);
  
-
- //const handleSend=()=> PostCarrito
 
  
   return (
@@ -66,7 +60,7 @@ const Cards = ({ item ,addToCart}) => {
               setVisible={setVisible}
               item={item}
               //saveData={saveData}
-              // data={db}
+              
               />
                  
                 <div  className="w-auto flex flex-col text-lg text-zinc-600 mb-10">
@@ -97,7 +91,7 @@ const Cards = ({ item ,addToCart}) => {
                     <button name="name" onClick={()=>{
                       addToCart(item);
                       visibleCart(true);
-                      //handleSend();
+                  
                     }
                     }
                     
