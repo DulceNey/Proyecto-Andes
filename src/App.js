@@ -4,7 +4,7 @@ import Cardlist from "./componentes/cards/Cardlist";
 import ToursProvider from "./componentes/ToursProvider";
 import Navbar from "./componentes/Navbar";
 
-
+import Carruselcompleto from "./Components/Componentes-Completos/Carruselcompleto";
 function App() {
   
   return (
