@@ -3,7 +3,7 @@ import ShoppingCart from './ShoppingCart';
 import { shoppingInitialState } from './shoppingReducer';
 
 
-const ModalContainer = ({setVisible,data}) => {
+const ModalContainer = ({setVisible,item}) => {
  
   return (
     <>
@@ -14,7 +14,7 @@ const ModalContainer = ({setVisible,data}) => {
         </svg>
       </div>
       <div>
-        <ShoppingCart data={data}  className="float-right" /> 
+        <ShoppingCart item={item}  className="float-right" /> 
       </div>
     </div>
     </>

@@ -1,8 +1,11 @@
 import React from "react";
+
 import { useState } from "react";
 import *as styles from "./styles";
 import ModalContainer from "../ModalContainer";
 import { IMAGEN } from "./multimedia";
+import { TYPES } from "../acciones";
+
 //import{PostCarrito} from "../ShoppingCart"
 
 
@@ -15,9 +18,6 @@ const Cards = ({ item ,addToCart}) => {
  
 
  //const handleSend=()=> PostCarrito
-
-
-
 
  
   return (
@@ -64,7 +64,7 @@ const Cards = ({ item ,addToCart}) => {
 
               <ModalContainer 
               setVisible={setVisible}
-              data={item}
+              item={item}
               //saveData={saveData}
               // data={db}
               />
@@ -95,7 +95,7 @@ const Cards = ({ item ,addToCart}) => {
                   <div   className="mb-0 p-0">
                     
                     <button name="name" onClick={()=>{
-                      addToCart(item.id);
+                      addToCart(item);
                       visibleCart(true);
                       //handleSend();
                     }
