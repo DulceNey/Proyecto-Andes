@@ -1,10 +1,14 @@
-
+import Carruselcompleto from "./Components/Componentes-Completos/Carruselcompleto";
+import Oferta from "./Components/Componentes-Completos/Oferta";
+import Presentacion from "./Components/Componentes-Completos/Presentacion";
 
 function App() {
   return (
-    <div className="bg-black w-12 h-12 text-white">
-
-    </div>
+    <>
+      <Presentacion />
+      <Oferta />
+      <Carruselcompleto />
+    </>
   );
 }
 
