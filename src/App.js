@@ -1,10 +1,10 @@
-import ShopingCart from "./Components/ShopingCart";
+import ShoppingCart from "./components/ShoppingCart";
 
 
 function App() {
   return (
     <div>
-   < ShopingCart />
+   < ShoppingCart />
     </div>
   );
 }
