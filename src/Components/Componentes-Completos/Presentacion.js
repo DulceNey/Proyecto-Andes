@@ -7,7 +7,7 @@ export const Presentacion = () => {
       <Imagen1 />
       <h1 className="text-center text-4xl text-neutral-300">
         {" "}
-        ¿Que hace unico a Los Andes: Aventura y Turismo?
+        ¿Qué hace único a Los Andes: Aventura y Turismo?
       </h1>
       <p className="text-center my-2.5 text-2xl text-neutral-300">
         {" "}

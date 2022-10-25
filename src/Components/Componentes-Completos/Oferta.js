@@ -11,7 +11,7 @@ const Oferta = () => {
       </h1>
       <h2 className="text-neutral-300 mt-3 mx-7 text-center">
         {" "}
-        Aproveche esta oferta unica <br />
+        Aproveche esta oportunidad única <br />
         para viajar con una persona.
         <br /> Disfruten de las maravillas <br /> de la Patagonia juntos.
       </h2>
