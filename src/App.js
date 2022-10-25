@@ -1,16 +1,27 @@
-
-import Oferta from "./Components/Componentes-Completos/Oferta";
-import Presentacion from "./Components/Componentes-Completos/Presentacion";
-
-
+import React from "react";
+import Cardlist from "./componentes/cards/Cardlist";
+//import ShoppingCart from "../src/componentes/ShoppingCart";
+import ToursProvider from "./componentes/ToursProvider";
+import Navbar from "./componentes/Navbar";
 
 
 function App() {
+  
   return (
-<>
-    <Presentacion/>
-    <Oferta/>
-</>
+    <>
+  
+    <ToursProvider>
+      <Navbar/>
+      <Cardlist  /> 
+      {/* <ShoppingCart/>  */}
+
+    </ToursProvider>
+
+
+
+        
+    </>
+  
   );
 }
 
