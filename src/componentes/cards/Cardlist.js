@@ -1,8 +1,8 @@
-import { TYPES } from '../acciones';
+import { TYPES } from '../carrito/acciones';
 import React from 'react';
 import Cards from './Cards';
 import *as  styles from './styles';
-import { useToursContext } from '../ToursContext';
+import { useToursContext } from '../carrito/ToursContext';
 
 
 

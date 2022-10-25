@@ -1,7 +1,7 @@
 import React from "react";
 import Cardlist from "./componentes/cards/Cardlist";
-import ShoppingCart from "./componentes/ShoppingCart";
-import ToursProvider from "./componentes/ToursProvider";
+import ShoppingCart from "./componentes/carrito/ShoppingCart";
+import ToursProvider from "./componentes/carrito/ToursProvider";
 
 
 

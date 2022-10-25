@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import *as styles from "./styles";
-import ModalContainer from "../ModalContainer";
+import ModalContainer from "../carrito/ModalContainer";
 import { IMAGEN } from "./multimedia";
 //import{PostCarrito} from "../ShoppingCart"
 
