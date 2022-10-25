@@ -32,8 +32,8 @@ import {TYPES} from './actions'
                 }
 
                  : {
-                    ...state,
-                    cart: [... state.cart, { ...newItem, quantity:1}]
+                ...state,
+                cart:[...state.cart,{...newItem,quantity:1}]
                     
                  }
 
@@ -57,7 +57,7 @@ import {TYPES} from './actions'
             }
             case TYPES.REMOVE_ALL_PRODUCTS:{
                 return { 
-                   ... state,
+                   ...state,
                     cart: state.cart.filter(item => item.id !== action.payload) 
                 }
             }
