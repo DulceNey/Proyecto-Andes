@@ -5,11 +5,11 @@ export const Presentacion = () => {
   return (
     <div className="bg-slate-100 dark:bg-slate-900 border-amber-900 dark:border-gray-400 border-4">
       <Imagen1 />
-      <h1 className="text-center text-4xl text-black">
+      <h1 className="text-center text-4xl text-black dark:text-neutral-300">
         {" "}
-        ¿Que hace unico a Los Andes: Aventura y Turismo?
+        ¿Qué hace diferente a Los Andes: Aventura y Turismo?
       </h1>
-      <p className="text-center my-2.5 text-2xl text-black">
+      <p className="text-center my-2.5 text-2xl text-black dark:text-neutral-300">
         {" "}
         Nuestro deseo de reavivar la pasión por el turismo, el explorar y
         divertirse junto a otros campistas y/o amantes de la naturaleza, la
