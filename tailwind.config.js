@@ -1,12 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
-  theme: {
-    extend: {
-      colors:{
-        100: '#64748b'
-      }
-    },
+export const content = ["./src/**/*.{html,js}"];
+export const theme = {
+  extend: {
+    colors: {
+      100: '#64748b'
+    }
   },
-  plugins: [ require('flowbite/plugin')],
-}
+};
+export const plugins = [require('tailwind-scrollbar-hide')];

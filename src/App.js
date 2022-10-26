@@ -1,15 +1,14 @@
-import React, { Components } from "react"
 import Foteer from './Components/Foteer'
 
 
 function App() {
+  
   return (
-
-    <div>
+  <div>
        <Foteer/>
 
     </div>
   );
 }
 
-export default App;
+export default App
