@@ -96,13 +96,14 @@ const ShoppingCart = ({ setvisibleCart, item }) => {
 
   return (
     <>
-      <div className="flex-col justify-center float-right w-5/6 h-screen bg-yellow-500 md:w-2/5 flex-nowrap item-center">
+      <div className="flex-col justify-center float-right w-5/6 h-screen bg-yellow-500 md:w-2/5 flex-nowrap item-center absolute top-16 right-0">
+
+{/* //este cambio va cuando lo pego a la nav bar //absolute top-16 right-0 */}
+
         {/* * <svg  onClick={()=>{setvisibleCart(false)}} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
           <path d="M16.192 6.344L11.949 10.586 7.707 6.344 6.293 7.758 10.535 12 6.293 16.242 7.707 17.656 11.949 13.414 16.192 17.656 17.606 16.424 13.364 12 17.606 7.758z" />
         </svg> */}
 
-        {/* {data.length === 0 && alert("Tu carrito esta vacio")}
-        {data.length !== 0 && ()} */}
         <div>
           {cart.map((item, index) => (
             <ItemsCarrito

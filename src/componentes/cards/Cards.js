@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import * as styles from "./styles";
-import ModalContainer from "../carrito/ModalContainer";
+//import ModalContainer from "../carrito/ModalContainer";
 import { TYPES } from "../carrito/acciones";
 
 const Cards = ({ item, addToCart }) => {
@@ -32,8 +32,8 @@ const Cards = ({ item, addToCart }) => {
 
         {visible && (
           <div className="fixed inset-0 z-50 overflow-y-auto opacity-100 bg-zinc-200">
-            <div className={styles.MODAL}>
-              <ModalContainer setVisible={setVisible} item={item} />
+            {/* <div className={styles.MODAL}>
+              <ModalContainer setVisible={setVisible} item={item} /> */}
 
               <div className="flex flex-col w-auto mb-10 text-lg text-zinc-600">
                 <button>
@@ -72,7 +72,7 @@ const Cards = ({ item, addToCart }) => {
                 </div>
               </div>
             </div>
-          </div>
+          // </div>
         )}
         {!visible && null}
       </figcaption>

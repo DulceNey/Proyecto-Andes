@@ -1,5 +1,5 @@
-import React from 'react';
 import {TYPES} from '../carrito/acciones';
+import React,{useEffect} from 'react';
 import Cards from './Cards';
 import *as  styles from './styles';
 import { useToursContext } from '../carrito/ToursContext';
@@ -24,6 +24,10 @@ const Cardlist = () => {
     dispatch({ type: TYPES.READ_STATE, payload: [ProductList, newCartItem] });
 
   };
+//este useeffect viene de prueba2//
+  useEffect(() => {
+    getState();
+  }, []);
 
 const addToCart = async (data) => {
     data.id = Date.now();

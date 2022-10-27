@@ -13,7 +13,7 @@ const ModalContainer = ({setVisible,item}) => {
         </svg>
       </div>
       <div>
-        <ShoppingCart item={item}  className="float-right" /> 
+        {/* <ShoppingCart item={item}  className="float-right" />  */}
       </div>
     </div>
     </>
