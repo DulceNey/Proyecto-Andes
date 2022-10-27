@@ -2,12 +2,11 @@ import React from "react";
 import { useState } from "react";
 import * as styles from "./styles";
 import ModalContainer from "../carrito/ModalContainer";
-import { IMAGEN } from "./multimedia";
 import { TYPES } from "../carrito/acciones";
 
 const Cards = ({ item, addToCart }) => {
   const [visible, setVisible] = useState(false);
-  const [visibleModal, setVisibleModal] = useState(false);
+  //const [visibleModal, setVisibleModal] = useState(false);
   const [visibleCart, setvisibleCart] = useState(false);
 
   return (
@@ -16,8 +15,8 @@ const Cards = ({ item, addToCart }) => {
         <h3 className={styles.H3}>{item.nombre}</h3>
 
         <img
-          src={IMAGEN.imagen}
-          alt={IMAGEN.nombre}
+          src={item.imagen}
+          alt={item.nombre}
           className={styles.DIV_IMG}
         ></img>
       </div>
