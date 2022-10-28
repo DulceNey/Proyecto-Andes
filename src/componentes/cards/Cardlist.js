@@ -1,26 +1,51 @@
-import { TYPES } from '../acciones';
-import React from 'react';
+import {TYPES} from '../carrito/acciones';
+import React,{useEffect} from 'react';
 import Cards from './Cards';
 import *as  styles from './styles';
-import { useToursContext } from '../ToursContext';
+import { useToursContext } from '../carrito/ToursContext';
+import axios from 'axios';
 
-const Cardlist = ({props}) => {
+
+
+
+const Cardlist = () => {
   const {state,dispatch} =useToursContext();
-  const {products,cart}=state;
-
-    const addToCart = (id)=>{
-        dispatch({type:TYPES.ADD_TO_CART, payload:id})
-        
-      };
-      const deleteFromCart = (id,all=false)=>{
-        if (all) {
-          dispatch({type:TYPES.REMOVE_ALL_PRODUCTS, payload:id})
-        } else {
-          
-          dispatch({type:TYPES.REMOVE_ONE_PRODUCT, payload:id})
-        };
-  };
+  const {products}=state;
   
+  const getState = async (data) => {
+    
+    const productsURL = "http://localhost:8080/products";
+    const cartURL = "http://localhost:8080/cart";
+    const resProducts = await axios.get(productsURL);
+    const resCart = await axios.get(cartURL);
+    const ProductList = await resProducts.data;
+    const newCartItem = await resCart.data;
+
+    dispatch({ type: TYPES.READ_STATE, payload: [ProductList, newCartItem] });
+
+  };
+//este useeffect viene de prueba2//
+  useEffect(() => {
+    getState();
+  }, []);
+
+const addToCart = async (data) => {
+    data.id = Date.now();
+
+    data["cantidad"] = 1;
+
+    const options = {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      data: JSON.stringify(data),
+    };
+
+    await axios("http://localhost:8080/cart", options);
+
+    getState();
+  };
+
+
 
   return (
     <>

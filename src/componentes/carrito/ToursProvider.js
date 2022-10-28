@@ -4,6 +4,7 @@ import { shoppingInitialState,shoppingReducer } from './shoppingReducer';
 import ToursContext from './ToursContext';
 
 
+
 const ToursProvider = ({children}) => {
      const [state, dispatch] = useReducer(shoppingReducer,shoppingInitialState);
      
