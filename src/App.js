@@ -3,6 +3,9 @@ import Navbar from "./componentes/Navbar";
 import Cardlist from "./componentes/cards/Cardlist";
 import ShoppingCart from "./componentes/carrito/ShoppingCart";
 import ToursProvider from "./componentes/carrito/ToursProvider";
+import Carruselcompleto from "./Components/Componentes-Completos/Carruselcompleto";
+import Oferta from "./Components/Componentes-Completos/Oferta";
+import Presentacion from "./Components/Componentes-Completos/Presentacion"
 
 function App() {
   const [carrito, setCarrito] = useState(false);
@@ -16,8 +19,11 @@ function App() {
         <Cardlist />
         {carrito && <ShoppingCart />}
       </ToursProvider>
+<Presentacion/>
+<Oferta/>
+<Carruselcompleto/>
     </>
-  );
-}
+  )
+  }
 
-export default App;
+export default App
