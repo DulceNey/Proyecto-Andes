@@ -7,8 +7,6 @@ import axios from 'axios';
 
 
 
-
-
 const Cardlist = () => {
   const {state,dispatch} =useToursContext();
   const {products}=state;

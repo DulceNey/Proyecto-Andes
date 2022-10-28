@@ -1,12 +1,10 @@
 import React from "react";
 import { useState } from "react";
 import * as styles from "./styles";
-//import ModalContainer from "../carrito/ModalContainer";
 import { TYPES } from "../carrito/acciones";
 
 const Cards = ({ item, addToCart }) => {
   const [visible, setVisible] = useState(false);
-  //const [visibleModal, setVisibleModal] = useState(false);
   const [visibleCart, setvisibleCart] = useState(false);
 
   return (
@@ -32,9 +30,7 @@ const Cards = ({ item, addToCart }) => {
 
         {visible && (
           <div className="fixed inset-0 z-50 overflow-y-auto opacity-100 bg-zinc-200">
-            {/* <div className={styles.MODAL}>
-              <ModalContainer setVisible={setVisible} item={item} /> */}
-
+            <div className={styles.MODAL}>
               <div className="flex flex-col w-auto mb-10 text-lg text-zinc-600">
                 <button>
                   <svg
@@ -72,7 +68,8 @@ const Cards = ({ item, addToCart }) => {
                 </div>
               </div>
             </div>
-          // </div>
+            //{" "}
+          </div>
         )}
         {!visible && null}
       </figcaption>
