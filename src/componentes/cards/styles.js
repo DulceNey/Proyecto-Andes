@@ -1,4 +1,4 @@
-export const CARDLIST_CONT="w-screen h-full flex flex-row flex-wrap justify-content  bg-neutral-300 overflow-hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-2 md:px-4 md:py-3 overflow-y-hidden";
+export const CARDLIST_CONT="w-screen h-full flex flex-row flex-wrap justify-content  bg-neutral-300 overflow-hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-2 md:px-4 md:py-3 overflow-y-hidden md:mt-2 md:pt-2";
 
 export const FIGURE="max-w-md h-auto border-solid border-4 border-naranja-palete rounded-md gap-y-1 mx-3 mb-3 bg-gris-fondo2 text-white flex-column md:w-5/6 md:h-full md:gap-1  ";
 

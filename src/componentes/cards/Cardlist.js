@@ -46,6 +46,7 @@ const addToCart = async (data) => {
   };
 
 
+
   return (
     <>
       <div className={styles.CARDLIST_CONT}>
