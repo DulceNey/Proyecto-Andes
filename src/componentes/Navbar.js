@@ -2,7 +2,7 @@ import React from "react";
 import Cajonbarra from "./Cajonbarra";
 import { useState, useEffect } from "react";
 import * as estilos from "./estilos";
-//import logo from '../multimedia/logo.png';
+import logo from './logo.jpg';
 import { useToursContext } from "./carrito/ToursContext";
 
 const Navbar = ({setCarrito}) => {
@@ -22,7 +22,7 @@ const Navbar = ({setCarrito}) => {
         <header className={estilos.HEADER}>
           <section className={estilos.SECTION_CONT}>
             <div className={estilos.LOGO}>
-              <img src="https://imgur.com/yyT8fNC" alt="logo-andes"></img>
+              <img src={logo} alt="logo-andes"></img>
             </div>
 
             <div>

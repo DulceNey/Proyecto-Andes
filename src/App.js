@@ -13,7 +13,7 @@ function App() {
       <ToursProvider>
         <Navbar setCarrito={setCarrito} />
         {/* //esto separa el componente nav de card// */}
-        <div className="h-14"></div>
+        <div className="h-20 md:h-14"></div>
         <Cardlist />
         {carrito && <ShoppingCart />}
       </ToursProvider>
