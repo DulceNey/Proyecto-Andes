@@ -16,7 +16,7 @@ const Carrusel = () => {
     <>
       <div className="relative flex items-center">
         <MdChevronLeft
-          className="opacity-50 cursor-pointer hover:opacity-100"
+          className="opacity-50 cursor-pointer hover:opacity-100 dark:fill-white"
           onClick={slideLeft}
           size={40}
         />
@@ -33,7 +33,7 @@ const Carrusel = () => {
           ))}
         </div>
         <MdChevronRight
-          className="opacity-50 cursor-pointer hover:opacity-100"
+          className="opacity-50 cursor-pointer hover:opacity-100 dark:fill-white"
           onClick={slideRight}
           size={40}
         />
