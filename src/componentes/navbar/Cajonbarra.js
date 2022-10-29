@@ -13,7 +13,7 @@ const Cajonbarra = ({setVisible}) => {
         className={estilos.NAV}
       >
         <a onClick={() => setVisible((visible) => !visible)}
-          href="#"
+          href="#inicio"
           className={estilos.A}
           >
 
