@@ -21,10 +21,11 @@ function App() {
         <Cardlist />
         {carrito && <ShoppingCart />}
       </ToursProvider>
-      <Carruselcompleto/>
-      <Oferta/>
-      <Presentacion/>
       <Front/>
+      <Presentacion/>
+      <Oferta/>
+      <Carruselcompleto/>
+      
     </>
   )
   }
