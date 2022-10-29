@@ -13,7 +13,7 @@ export const data = [
   },
   {
     id: 4,
-    img: "https://cdn.discordapp.com/attachments/1007116351120355340/1007116525288824912/Patagonia-6.jpg",
+    img: "https://cdn.discordapp.com/attachments/1007116351120355340/1007122885627887726/argentina-3691390_1920.jpg",
   },
   {
     id: 5,

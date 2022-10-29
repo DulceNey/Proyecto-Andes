@@ -1,4 +1,3 @@
-export const BODY="w-screen h-screen overflow-x-hidden font-semibold bg-naranja-palete text-md";
 export const HEADER="fixed z-50 w-full h-16 p-1 bg-slate-300 dark:bg-slate-900 ";
 export const SECTION_CONT="flex items- justify-between w-auto h-auto";
 export const LOGO=" w-16 h-fit py-1 mb-3 m-0  mr-2 pl-3";

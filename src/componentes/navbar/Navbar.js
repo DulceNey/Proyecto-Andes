@@ -2,14 +2,13 @@ import React from "react";
 import Cajonbarra from "./Cajonbarra";
 import { useState, useEffect } from "react";
 import * as estilos from "./estilos";
-import logo from './logo.jpg';
+import logo from "./logo.jpg";
 import { useToursContext } from "../carrito/ToursContext";
 
-const Navbar = ({setCarrito}) => {
+const Navbar = ({ setCarrito }) => {
   const [visible, setVisible] = useState(false);
   const { state, dispatch } = useToursContext();
   const [drawer, setDrawer] = useState(true);
-
 
   useEffect(() => {
     setDrawer((drawer) => !drawer);
@@ -17,8 +16,7 @@ const Navbar = ({setCarrito}) => {
 
   return (
     <>
-      <body >
-      {/* className={estilos.BODY} */}
+      <body>
         <header className={estilos.HEADER}>
           <section className={estilos.SECTION_CONT}>
             <div className={estilos.LOGO}>
@@ -28,7 +26,7 @@ const Navbar = ({setCarrito}) => {
             <div>
               <button
                 className={estilos.BUTTON}
-                  onClick={() => setVisible((visible) => !visible)}
+                onClick={() => setVisible((visible) => !visible)}
               >
                 {visible && (
                   <svg
@@ -52,7 +50,10 @@ const Navbar = ({setCarrito}) => {
                 )}
               </button>
 
-              <button className={estilos.CARRITO} onClick={()=> setCarrito((prev)=> !prev)}>
+              <button
+                className={estilos.CARRITO}
+                onClick={() => setCarrito((prev) => !prev)}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="32"
@@ -65,26 +66,18 @@ const Navbar = ({setCarrito}) => {
                   {state.cart.length}
                 </h2>
               </button>
-              {drawer && <Cajonbarra setVisible={setVisible} visible={visible} setDrawer={setDrawer}/>}
+              {drawer && (
+                <Cajonbarra
+                  setVisible={setVisible}
+                  visible={visible}
+                  setDrawer={setDrawer}
+                />
+              )}
 
               {!drawer && null}
             </div>
           </section>
         </header>
-        {/* <div className="w-full h-full">
-          <section id="inicio" className="w-full h-1/4">
-            Inicio
-          </section>
-          <section id="excursiones" className="w-full h-1/4">
-            Excursiones
-          </section>
-          <section id="conocenos" className="w-full h-1/4">
-            Conocenos
-          </section>
-          <section id="contacto" className="w-full h-1/4">
-            Contacto
-          </section>
-        </div> */}
       </body>
     </>
   );
