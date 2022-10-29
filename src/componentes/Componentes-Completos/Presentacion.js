@@ -3,6 +3,7 @@ import Lista from "../Lista";
 
 export const Presentacion = () => {
   return (
+    <section id="conocenos">
     <div className="bg-slate-300 dark:bg-slate-900 md:p-2">
       <Imagen1 />
       <h1 className="text-center text-4xl text-black dark:text-neutral-300 pt-4">
@@ -17,6 +18,7 @@ export const Presentacion = () => {
       </p>
       <Lista/>
     </div>
+    </section>
   );
 };
 

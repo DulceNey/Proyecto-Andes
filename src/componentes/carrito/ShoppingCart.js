@@ -96,7 +96,7 @@ const ShoppingCart = ({ setvisibleCart, item }) => {
 
   return (
     <>
-      <div className=" fixed flex-col justify-center float-right w-5/6 h-full bg-slate-300 md:w-2/5 flex-nowrap item-center z-50 top-16 right-0">
+      <div className=" fixed flex-col justify-center float-right w-5/6 h-full bg-slate-300 dark:bg-slate-900 md:w-2/5 flex-nowrap item-center z-50 top-16 right-0">
 
         <div>
           {cart.map((item, index) => (
