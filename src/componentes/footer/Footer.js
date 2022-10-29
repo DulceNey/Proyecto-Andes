@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <>
       <div className="justify-between flex flex-col md:flex-row content-center text-lg p-0 m-0 text-slate-300 ">
-        <div className="bg-slate-600 h-56 md:w-1/3 p-4 md:pl-8 md:pt-4">
+        <div className="bg-slate-600 dark:bg-slate-700 h-56 md:w-1/3 p-4 md:pl-8 md:pt-4">
           <h3 className="font-semibold text-xl mb-1">
             Andes Aventura Y Turismo
           </h3>
@@ -25,7 +25,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="bg-slate-600 h-56 md:w-1/3 p-4 text-base md:pl-8 md:pt-6">
+        <div className="bg-slate-600 dark:bg-slate-700 h-56 md:w-1/3 p-4 text-base md:pl-8 md:pt-6">
           <p className="pb-2">Medios de pago y promociones.</p>
           <p className="pb-2">Términos y condiciones.</p>
           <p className="pb-2">Preguntas frecuentes.</p>
@@ -33,7 +33,7 @@ export const Footer = () => {
           <p className="pb-2">Colabora con nosotros.</p>
         </div>
 
-        <div className="bg-slate-600 h-56 md:w-1/3 p-4">
+        <div className="bg-slate-600 dark:bg-slate-700 h-56 md:w-1/3 p-4">
           <h2 className="font-medium tracking-wider pb-2 md:pb-1">Contacto</h2>
           <p className="text-sm pt-2">Andesturismo@gmail.com</p>
           <p className="pt-1">(+54) 29- 4462220</p>
