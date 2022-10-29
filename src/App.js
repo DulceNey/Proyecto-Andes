@@ -24,7 +24,7 @@ function App() {
       <Carruselcompleto/>
       <Oferta/>
       <Presentacion/>
-<div><Front/></div>
+      <Front/>
     </>
   )
   }
