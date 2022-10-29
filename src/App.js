@@ -7,6 +7,7 @@ import Carruselcompleto from "./componentes/Componentes-Completos/Carruselcomple
 import Oferta from "./componentes/Componentes-Completos/Oferta";
 import Presentacion from "./componentes/Componentes-Completos/Presentacion";
 import Front from "./componentes/Front";
+import { Footer } from "./componentes/footer/Footer";
 
 
 function App() {
@@ -18,13 +19,15 @@ function App() {
         <Navbar setCarrito={setCarrito} />
         {/* //esto separa el componente nav de card// */}
         <div className="h-20 md:h-14"></div>
-        <Cardlist />
-        {carrito && <ShoppingCart />}
-      </ToursProvider>
-      <Carruselcompleto/>
-      <Oferta/>
+        <Cardlist /> 
+       {carrito && <ShoppingCart />}
+      </ToursProvider> 
+       <Front/>
       <Presentacion/>
-      <Front/>
+      <Oferta/>
+      <Carruselcompleto/> 
+      <Footer/>
+      
     </>
   )
   }
