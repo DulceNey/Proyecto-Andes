@@ -7,7 +7,7 @@ const Front = () => {
         <h1 className="ml-4  text-lg italic text-center text-white md:text-xl xl:text-2x1">
           Viví lo Mejor de la Patagonia con una experiencia única e inolvidable{" "}
         </h1>
-        <h2 className=" text-6xl italic text-center text-white mt-4">
+        <h2 className=" text-6xl italic text-center text-white mt-1">
           Andes Aventura y Turismo
         </h2>
         <p className="ml-6 tracking-wide text-lg italic text-white pt-56">

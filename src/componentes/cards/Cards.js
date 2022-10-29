@@ -35,7 +35,7 @@ const Cards = ({ item, addToCart }) => {
                 <button>
                   <svg
                     onClick={() => setVisible(false)}
-                    className="float-right h-8 p-0 m-0"
+                    className="float-right h-8 p-0 m-0 fill-orange-700"
                     xmlns="http://www.w3.org/2000/svg"
                     width="36"
                     height="36"

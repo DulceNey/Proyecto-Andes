@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <>
       <div className="justify-between flex flex-col md:flex-row content-center text-lg p-0 m-0 text-slate-300 ">
-        <div className="bg-slate-600 h-56 md:w-1/3 p-4 md:pl-8 ">
+        <div className="bg-slate-600 h-56 md:w-1/3 p-4 md:pl-8 md:pt-4">
           <h3 className="font-semibold text-xl mb-1">
             Andes Aventura Y Turismo
           </h3>

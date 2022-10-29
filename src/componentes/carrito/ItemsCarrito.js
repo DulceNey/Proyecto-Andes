@@ -10,7 +10,7 @@ const ItemsCarrito = ({
 
   return (
     <>
-      <div className="flex flex-row items-center justify-between w-full gap-12 pl-3 md:justify-between text-slate-900 bg-slate-500 md:w-full">
+      <div className="flex flex-row items-center justify-between w-full gap-12 pl-3 md:justify-between text-stone-900 bg-naranja-palete md:w-full">
         <div className="p-3 tracking-wide ">
           <h3 className="font-semibold text-md ">{nombre}</h3>
           <h3 className="pt-1 pb-3 mb-2 font-normal opacity-0 text-md md:opacity-100">

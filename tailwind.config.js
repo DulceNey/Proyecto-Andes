@@ -15,6 +15,7 @@ module.exports = {
         'fondo-boton':'#4C656E',
         'fondo-marron-palete':'#532401',
         'gris-blanco-palete': '#FFF5E9',
+        
 
       }
     },

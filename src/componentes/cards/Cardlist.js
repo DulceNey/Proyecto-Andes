@@ -48,16 +48,19 @@ const addToCart = async (data) => {
 
   return (
     <>
+     <div className='text-stone-700 bg-slate-300 font-semibold text-3xl text-center tracking-wide md:text-4xl md:pb-10'>Conocé nuestros Tours</div>
       <div className={styles.CARDLIST_CONT}>
-        {products.map((item) => (
+       
+       {products.map((item) => (
           <Cards
             key={item.id}
             item={item}
             addToCart={addToCart}
-          >
-          
+          >          
           </Cards>
+          
         ))}
+       
       </div>
     </>
   )

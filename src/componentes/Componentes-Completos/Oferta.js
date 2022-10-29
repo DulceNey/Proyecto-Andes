@@ -3,13 +3,14 @@ import Imagen2 from "../Imagen2";
 
 const Oferta = () => {
   return (
-    <div className=" w-full bg-slate-100 dark:bg-slate-900 border-4 h-[auto] border-amber-900 dark:border-gray-400">
+    <div className=" w-full bg-slate-300 dark:bg-slate-900 pt-12 h-auto md:pb-8">
       <Imagen2 />
-      <h1 className="text-black dark:text-neutral-300 text-4xl mx-7 text-center">
+      <h1 className="text-stone-700 dark:text-neutral-300 text-3xl md:text-4xl mx-6 text-center pb-6">
         {" "}
         Sorprenda a alguien <br /> Con esta oferta especial
       </h1>
-      <h2 className="text-black dark:text-neutral-300 mt-3 mx-7 text-center">
+      <h2 className="text-stone-700 text-
+      lg font-medium dark:text-neutral-300 mx-7 text-center">
         {" "}
         Aproveche esta oportunidad única <br />
         para viajar con una persona.

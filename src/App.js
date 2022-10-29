@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "./componentes/Navbar";
+import Navbar from "./componentes/navbar/Navbar";
 import Cardlist from "./componentes/cards/Cardlist";
 import ShoppingCart from "./componentes/carrito/ShoppingCart";
 import ToursProvider from "./componentes/carrito/ToursProvider";
@@ -9,7 +9,6 @@ import Presentacion from "./componentes/Componentes-Completos/Presentacion";
 import Front from "./componentes/Front";
 import { Footer } from "./componentes/footer/Footer";
 
-
 function App() {
   const [carrito, setCarrito] = useState(false);
 
@@ -17,19 +16,18 @@ function App() {
     <>
       <ToursProvider>
         <Navbar setCarrito={setCarrito} />
-        {/* //esto separa el componente nav de card// */}
-        <div className="h-20 md:h-14"></div>
-        <Cardlist /> 
-       {carrito && <ShoppingCart />}
-      </ToursProvider> 
-       <Front/>
-      <Presentacion/>
-      <Oferta/>
-      <Carruselcompleto/> 
-      <Footer/>
-      
-    </>
-  )
-  }
+        <Front />
+        <Cardlist />
+        {carrito && <ShoppingCart />}
+        <Presentacion />
+      </ToursProvider>
 
-export default App
+      <Carruselcompleto />
+      <Oferta />
+
+      <Footer />
+    </>
+  );
+}
+
+export default App;
