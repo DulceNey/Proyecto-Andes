@@ -6,6 +6,7 @@ import ToursProvider from "./componentes/carrito/ToursProvider";
 import Carruselcompleto from "./componentes/Componentes-Completos/Carruselcompleto";
 import Oferta from "./componentes/Componentes-Completos/Oferta";
 import Presentacion from "./componentes/Componentes-Completos/Presentacion";
+import Front from "./componentes/Front";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Carruselcompleto/>
       <Oferta/>
       <Presentacion/>
+<div><Front/></div>
     </>
   )
   }
